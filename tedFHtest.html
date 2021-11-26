@@ -1220,6 +1220,26 @@ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', 
 		.appendTo( jQuery( this ) );
 } );} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
 </script>
+	
+	<script type="text/javascript">
+// Parse the URL
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+// Give the URL parameters variable names
+var source = getParameterByName('utm_source');
+var medium = getParameterByName('utm_medium');
+var campaign = getParameterByName('utm_campaign');
+ 
+// Put the variable names into the hidden fields in the form.
+document.getElementsByName("utm_source").value = source;
+document.getElementsByName("utm_medium").value = medium;
+document.getElementsByName("utm_campaign").value = campaign;
+</script>
+	
 <script type="text/javascript">
 gform.initializeOnLoaded( function() { jQuery(document).trigger('gform_post_render', [2, 1]) } );
 </script>
