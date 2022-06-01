@@ -1,6 +1,11 @@
 <script>
-  function myFunction() {
-  alert("The form was submitted 2");
-  window.parent.location = "https://pfpdev-hmiotc.cs209.force.com/mytrip/s/";
-}  
+var myElement = document.getElementById("wFormThankYouPage");
+
+if(!myElement){
+    alert("The form was not submitted");
+}
+
+if(myElement){
+    alert("The form was submitted");
+}
 </script>
