@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales Engagement Training Knowledge Base</title>
+    <title>Sales Engagement Training Knowledge Base - Raw Slides</title>
     <style>
-        /* --- CSS STYLES --- */
+        /* --- CSS STYLES (Kept for visual appeal) --- */
         :root {
             --sidebar-width: 280px;
             --primary-color: #2c3e50;
@@ -104,15 +104,17 @@
         }
         tr:nth-child(even) { background-color: #f2f2f2; }
 
-        /* CODE/TECHNICAL BLOCKS */
-        .code-block {
-            background: #f4f4f4;
-            padding: 15px;
+        /* RAW TEXT BLOCK */
+        .raw-text {
+            white-space: pre-wrap; /* Keeps line breaks from the PDF content */
+            font-family: 'Georgia', serif;
+            font-size: 1.05rem;
+            background: #fafafa;
+            padding: 20px;
             border-radius: 5px;
-            font-family: monospace;
-            border-left: 3px solid var(--accent-color);
+            border: 1px solid #eee;
         }
-        
+
         /* IMAGE PLACEHOLDERS */
         .img-container {
             text-align: center;
@@ -142,57 +144,73 @@
 <body>
 
     <aside class="sidebar">
-        <h3>Training Manual</h3>
+        <h3>PDF Slides</h3>
         <nav>
-            <a href="#intro">Introduction</a>
-            <a href="#checklist">1. Go Live Checklist</a>
-            <a href="#users">2. User Management</a>
-            <a href="#outlook">3. Outlook Integration</a>
-            <a href="#cadences">4. Cadences</a>
-            <a href="#leads">5. Leads & Automations</a>
-            <a href="#reporting">6. Reporting</a>
-            <a href="#ideas">7. Enhancement Ideas</a>
+            <a href="#slide-1">Agenda</a>
+            <a href="#slide-3">Go Live Steps</a>
+            <a href="#slide-5">Permission Sets</a>
+            <a href="#slide-13">OWA & DKIM</a>
+            <a href="#slide-15">Cadences</a>
+            <a href="#slide-20">Leads & Automations</a>
+            <a href="#slide-27">Reports</a>
+            <a href="#slide-29">Enhancement Ideas</a>
+            <a href="#slide-36">Thank You!</a>
         </nav>
     </aside>
 
     <div class="main-content">
+        <h1>Sales Engagement Training (Raw PDF Content)</h1>
         
-        <section id="intro">
-            <h1>Sales Engagement Training</h1>
-            <p>Welcome to the Passion Fruit Partners Sales Engagement training guide. This knowledge base covers the setup, user management, and automation processes for your Salesforce environment.</p>
-            <p><strong>Agenda:</strong></p>
-            <ul>
-                <li>Go Live Checklist</li>
-                <li>User Management</li>
-                <li>Outlook</li>
-                <li>Cadences</li>
-                <li>Leads and Automations</li>
-                <li>Reporting</li>
-                <li>Enhancement Ideas</li>
-            </ul>
+        <section id="slide-1">
+            <h2>Slide 1: Agenda</h2>
+            <div class="raw-text">
+Agenda
+
+Go Live Checklist
+User Management
+Outlook
+Cadendences
+Leads and Automations
+Reporting
+Enhancement Ideas
+            </div>
         </section>
 
-        <section id="checklist">
-            <h2>1. Go Live Checklist</h2>
-            <p>Ensure the following steps are completed for the January Go Live:</p>
-            <ol>
-                <li><strong>Update Email Templates:</strong> Update all Automated email templates with appropriate messages for each email interval. 
-                    <br><em>Note: Do not use {{{Sender.Signature}}} in templates; the logo will not render.</em>
-                </li>
-                <li><strong>Update Cadences:</strong> Update the "Church Visit Cadence" with templates and intervals that align with your processes.
-                    <br><em>Ensure the "Add to email thread" checkbox is configured based on testing preferences.</em>
-                </li>
-                <li><strong>Folder Sharing:</strong> If the Investments Team and Loans Team need to see each other's Cadences or Email Templates, update the Folder Sharing settings.</li>
-                <li><strong>User Permissions:</strong> Remove "Sales Engagement Basic User" permissions and assign "Sales Engagement User" permissions. Having both can cause issues.</li>
-                <li><strong>Working Hours:</strong> Users can set Cadence working days and hours in their Personal Information settings (View profile Avatar > Settings).</li>
-            </ol>
+        <section id="slide-2">
+            <h2>Slide 2: Go Live Checklist</h2>
+            <div class="raw-text">
+Go Live
+Checklist
+©2025 pfp all rights reserved
+            </div>
         </section>
 
-        <section id="users">
-            <h2>2. User Management</h2>
-            
-            <h3>Permission Sets Definitions</h3>
-            <p>The following permission sets are available for assignment:</p>
+        <section id="slide-3">
+            <h2>Slide 3: Steps for Go Live in January</h2>
+            <div class="raw-text">
+Steps for Go Live in January
+1. Update all Automated email templates with appropriate messages for each email interval.
+(Don't use {{{Sender.Signature}}} in the email templates. The logo will not render.)
+2. Update Church Visit Cadence with the email templates and intervals that make sense for your processes.
+Ensure the "Add to email thread" checkbox is selected or deselected based which option looks better after testing
+3. Note if you'd like the Investments Team and Loans Team to be able to see each other's Cadences, update the Cadence Folder Sharing (Same goes for the Email Template Folder Sharing)
+4. Remove Sales Engagement Basic User Permissions and Assign Sales Engagement User Permission to Users (having both on one user can cause issues)
+5. Users can set Cadence Settings working days and hours in their Personal Information settings (from view profile Avatar on the upper right of the page)
+            </div>
+        </section>
+
+        <section id="slide-4">
+            <h2>Slide 4: User Management</h2>
+            <div class="raw-text">
+User
+Management
+©2025 pfp all rights reserved
+            </div>
+        </section>
+
+        <section id="slide-5">
+            <h2>Slide 5: New Permission Sets</h2>
+            <p>The following table contains the raw content from the PDF slide regarding new permission sets:</p>
             <table>
                 <thead>
                     <tr>
@@ -204,128 +222,507 @@
                 <tbody>
                     <tr>
                         <td>Email Template Builder</td>
-                        <td>Provides access to the lightning Email Template Builder.</td>
-                        <td>Any staff who need to create Email Templates.</td>
+                        <td>Provides access to the lightning Email Template Builder</td>
+                        <td>Any staff who need to create Email Templates</td>
                     </tr>
                     <tr>
                         <td>Sales Engagement User</td>
-                        <td>Provides access to all Sales Engagement functionality, Inbox access, send email.</td>
-                        <td>All staff who would need to assign/reassign Leads to Cadences as part of their daily role.</td>
+                        <td>Provides access to all Sales Engagement functionality, Inbox access, send email</td>
+                        <td>All staff who would need to assign/reassign Leads to Cadences as part of their daily role</td>
                     </tr>
                     <tr>
                         <td>Quick Cadence Creator</td>
-                        <td>Functionality for a user to create their own single-step repeatable "Cadences".</td>
-                        <td>Could be a feature rolled out to all Sales Engagement Users in the future.</td>
+                        <td>Provides functionality for a user to create their own single step repeatable "Cadences"</td>
+                        <td>Could be a feature rolled out to all Sales Engagement Users in the future</td>
                     </tr>
                     <tr>
                         <td>Sales Engagement Cadence Creator</td>
-                        <td>Create cadences for your organization.</td>
-                        <td>The users responsible for defining the cadence processes for each department.</td>
+                        <td>Create cadences for your organization</td>
+                        <td>The users responsible for defining the cadence processes for each department</td>
                     </tr>
                     <tr>
                         <td>Access DKIM Keys</td>
                         <td>For temporary access to "setup" and the DKIM keys location. Session activation required.</td>
-                        <td>Currently assigned to specific admins; requires running a flow to activate the session.</td>
+                        <td>This is currently assigned to Ben, and he must run a flow to activate the session in order to view the DKIM Keys</td>
                     </tr>
                 </tbody>
             </table>
-
-            <h3>Cadence & Folder Sharing</h3>
-            <ul>
-                <li><strong>Cadence Folder Sharing:</strong> "Cadences from Salesforce" has been removed from user view to reduce clutter. Investment Cadences are visible to the investments public group; Loan Cadences to the loan personnel public group.</li>
-                <li><strong>Email Template Sharing:</strong> Managed by Alica and Vadim. Cadence Automated Emails are visible to all internal users.</li>
-                <li><strong>Cadence Tracker Read/Write:</strong> Access has been opened up in "Loans Dept" and "Investments Dept" permission sets. This allows users to reassign the target in the cadence to themselves.</li>
-            </ul>
         </section>
 
-        <section id="outlook">
-            <h2>3. Outlook Integration</h2>
-            
-            <h3>Org-Wide Email & DKIM</h3>
-            <p>Users and Automations can use Organization-Wide Email Addresses to send messages from generic emails. Configure this in <strong>Setup > Organization-Wide Addresses</strong>.</p>
-            <p><em>Note: A DKIM Key was configured to minimize external server rejection of un-verified email.</em></p>
-
-            <h3>Outlook Integration Features</h3>
-            <ul>
-                <li><strong>Log Emails:</strong> Log emails to Salesforce records directly from Outlook.</li>
-                <li><strong>Create Records:</strong> Create Salesforce records (Leads, Tasks, Opportunities) from Outlook.</li>
-                <li><strong>Inbox View:</strong> The "Inbox with Work Queue" component is assigned to System Administrators, while the default Inbox Email Pane is for standard users.</li>
-            </ul>
+        <section id="slide-6">
+            <h2>Slide 6: Remove Basic Permission and Assign Sales Engagement User Permission</h2>
+            <div class="raw-text">
+Remove Basic Permission and Assign Sales Engagement
+User Permission
+... > SETUP > PERMISSION SET 'SALES ENGAGEMENT BASIC USER'
+ Sales Engagement Basic User
+Current Assignments
+Full Name ↑
+Ben Krichun
+Carolyn Kellogg
+☐ Fabiola Campos
+Noel Rosas
+Vadim Sidlovskiy
+Add Assignment
+Active
+Role
+Profile
+User License
+Expires On
+General Staff
+Standard User
+Salesforce
+General Staff
+Standard User
+Salesforce
+✓
+General Staff
+Standard User
+Salesforce
+General Staff
+System Administrator
+Salesforce
+General Staff
+Standard User
+Salesforce
+            </div>
+            <p><strong>Note:</strong> This slide content includes a representation of a Salesforce screenshot/interface.</p>
         </section>
 
-        <section id="cadences">
-            <h2>4. Cadences</h2>
-            
-            <h3>Investment Cadence - Church Visit</h3>
-            <p>This cadence tracks the flow from the initial call. It typically includes steps for "Initial Call", followed by automated emails or follow-up tasks.</p>
+        <section id="slide-7">
+            <h2>Slide 7: Email Template Builder</h2>
+            <div class="raw-text">
+Email Template Builder
+Currently assigned to Alica and Vadim.
+Permission Set
+Email Template Builder
+QFind Settings...
+Clone Edit Properties Manage Assignments View Summary
+Permission Set Overview  System Permissions
+System Permissions
+System
+Permission Name
+Edit
+Accept Risk For Problems
+Access Actionable Relationship Center for partner users
+Access Activities
+Access Banking Relationship Assistance
+Access Banking Service Agent
+Access Custom Mobile Apps
+Access drag-and-drop content builder
+Access Employee Experience
+Access Experience Management
+Access Libraries
+Access Personalization Platform
+Access Policy Agent
+Access Service Einstein
+Enabled Description
+Allows users to accept risk for problems.
+Grants access to ARC Relationship Graph, ARC Highlights Panel, and ARC Record Details Lightning components to partner users.
+Access tasks, events, calendar, and email.
+Enable Banking Relationship Assistance.
+Grants users access to Banking Service Assistance Al agent.
+Allow user to run custom mobile apps.
+Create and manage email templates and content in a drag-and-drop builder.
+Access objects in the employee-experience data model.
+Access pages and dashboards available in Experience Management
+Access libraries.
+Access the Personalization Platform and its entities.
+Enable insurance service assistance agent features.
+Grants users the access to Al-powered copilot actions for capturing service process requests.
+Video Tutorial I Help for this Page
+            </div>
+        </section>
+
+        <section id="slide-8">
+            <h2>Slide 8: Leads Access</h2>
+            <div class="raw-text">
+Leads Access
+Full access to Leads has been added to the following permission sets
+Loans Dept
+ Investments Dept
+Set Field-Level Security
+Original Campaign
+Field Label
+ Data Type
+Original Campaign
+ Lookup(Campaign)
+Permission sets with object permissions
+Field-Level Security for Permission Set
+Investments Dept
+Loans Dept
+Magic Mover perms
+sfdc.activityplatform
+Save Cancel
+API Name
+Investments Dept
+Loans Dept
+Magic Mover perms
+sfdc_activityplatform
+Description
+allows complete access to Investments-specific objects
+allows complete access to Loans-specific Objects
+Permset for the 'sfdc.activityplatform' C2C integration
+Help for this Page
+Read Access
+Edit Access
+            </div>
+        </section>
+
+        <section id="slide-9">
+            <h2>Slide 9: Cadences Folder Sharing</h2>
+            <div class="raw-text">
+Cadences Folder Sharing
+Took away Cadences from Salesforce from all users to remove clutter
+ Investments - investments public group view
+ Loan - loan personnel public group view
+Name
+Cadences from Salesforce
+Investment Cadences
+Loan Cadences
+            </div>
+        </section>
+
+        <section id="slide-10">
+            <h2>Slide 10: Cadence Tracker Read/Write</h2>
+            <div class="raw-text">
+Cadence Tracker Read/Write
+This allows the user to reassign the
+target in the cadence to themselves
+Currently access has been opened up in
+Loans Dept and Investments Dept
+Permission Sets
+Permission Set
+Loans Dept
+Find Settings
+Permission Set Overview Obiect Settings
+Cadence Trackers
+Object Permissions
+
+"Permission Name
+","Enabled
+"
+"Read
+",
+"Create
+",
+"Edit
+","a
+"
+"Delete
+",
+"View All Records
+","G
+"
+"Modify All Records
+",
+"View All Fields
+",
+Parmission Set
+Investments Dept
+Find Settings
+X
+Clone Edit Properties Manage Assignments View Summary
+Permission Set Overview Object Settings
+Cadence Trackers
+Object Permissions
+
+"Permission Name
+","Enabled
+"
+"Read
+",
+"Create
+",
+"Edit
+",
+"Delete
+",
+"View All Records
+",
+"Modify All Records
+",
+"View All Fields
+"," 
+"
+Cadence Trackers
+Edit
+Clone Edit Properties Manage Assignments View Summary
+Cadence Trackers
+Edit
+            </div>
+        </section>
+
+        <section id="slide-11">
+            <h2>Slide 11: Email Template sharing</h2>
+            <div class="raw-text">
+Email Template sharing
+ All folders - Alica and Vadim Manage
+ Cadence Automated Emails - all internal users view
+ Investment Email Templates - Investments public group edit
+ Loans Email Templates - Loans personnel public group edit
+            </div>
+        </section>
+
+        <section id="slide-12">
+            <h2>Slide 12: Outlook</h2>
+            <div class="raw-text">
+© 2025 pfp all rights reserved
+ Outlook
+            </div>
+        </section>
+
+        <section id="slide-13">
+            <h2>Slide 13: Organization-Wide Email Addresses & DKIM</h2>
+            <div class="raw-text">
+Organization-Wide Email Addresses & DKIM
+Users/Automations can use Organization-Wide Email Addresses  to send messages from generic emails:
+● Setup > Organization-Wide Addresses 
+● Allow either All or Selected Profiles to each Organization-Wide Address
+NOTE: Once you click Save, the user managing the email account will receive a confirmation email and will need to click on the link 
+to activate this process
+A DKIM Key was also configured to minimize external server rejection of un-verified email.
+Organization-Wide Email Address Documentation
+            </div>
+        </section>
+
+        <section id="slide-14">
+            <h2>Slide 14: Outlook Integration</h2>
+            <div class="raw-text">
+Outlook Integration
+Log emails to Salesforce records
+Create Salesforce records from Outlook
+            </div>
+        </section>
+
+        <section id="slide-15">
+            <h2>Slide 15: Setup > Outlook Integration and Sync</h2>
+            <div class="raw-text">
+Setup > Outlook Integration and Sync
+Default Inbox Email Pane for outlook
+Inbox with Work Queue component - assigned to Sys Admin Only
+            </div>
+        </section>
+
+        <section id="slide-16">
+            <h2>Slide 16: Cadences</h2>
+            <div class="raw-text">
+© 2025 pfp all rights reserved
+ Cadences
+            </div>
+        </section>
+
+        <section id="slide-17">
+            <h2>Slide 17: Investment Cadence - Church Visit</h2>
+            <div class="raw-text">
+Investment Cadence - Church Visit
+            </div>
 
             <div class="img-container">
-                <img src="cadence-flow.png" alt="Chart showing Cadence Flow" onerror="this.style.display='none'; this.parentElement.innerText='[Image missing: Upload a file named cadence-flow.png to your GitHub repository to see the Cadence chart here]'">
-            </div>
-
-            <h3>To Do List vs. Work Queue</h3>
-            <p><strong>Work Queue:</strong> A feature of Sales Engagement for tracking Cadence tasks.</p>
-            <p><strong>To Do List:</strong> A replacement for the Work Queue. It is accessible from the Sales Engagement App only and has been added to the Utility bar for the Investments and Loans App.</p>
-            
-            <div class="code-block">
-                <strong>Tip:</strong> Set your Cadence working hours in "Cadence Settings" under your personal settings to ensure tasks appear in your To Do List only during your working hours.
+                <p><strong>[Placeholder for Cadence Flow Diagram]</strong></p>
+                <img src="YOUR_CONVERTED_CADENCE_FLOW_GDIVE_LINK_HERE" alt="Chart showing Cadence Flow" onerror="this.style.display='none'; this.parentElement.innerText='[Image missing: Replace the placeholder text "YOUR_CONVERTED_CADENCE_FLOW_GDIVE_LINK_HERE" with your converted Google Drive direct link for the Cadence Flow diagram.]'">
             </div>
         </section>
 
-        <section id="leads">
-            <h2>5. Leads & Automations</h2>
-            
-            <h3>Lead Flow Process</h3>
-            <p>The current process for a "Church Visit" lead involves creating a New Lead, adding them to a Cadence, and attempting to connect. If interested, the Lead is converted to a Placeholder Ministry Partner, New Business Contact, or New Opportunity.</p>
+        <section id="slide-18">
+            <h2>Slide 18: To Do List & Work Queue</h2>
+            <div class="raw-text">
+Utility bar with To Do List has been added to Investments and Loans App
+Work Queue is a feature of Sales Engagement for tracking Cadence tasks - Note it
+To Do List is a replacement for Work Queue and it is accessible 
+from the Sales Engagement App only.
+            </div>
+        </section>
+
+        <section id="slide-19">
+            <h2>Slide 19: Cadence settings</h2>
+            <div class="raw-text">
+Cadence settings
+In your settings, find Cadence Settings and set your working hours
+© 2025 pfp all rights reserved
+            </div>
+        </section>
+
+        <section id="slide-20">
+            <h2>Slide 20: Leads & Automations</h2>
+            <div class="raw-text">
+© 2025 pfp all rights reserved
+ Leads & Automations
+            </div>
+        </section>
+
+        <section id="slide-21">
+            <h2>Slide 21: Leads</h2>
+            <div class="raw-text">
+Leads
+● Defined Lead Processes - Church Visit
+● Lead record type - Lead
+● Lead Field Mapping
+● Future - Lead Assignment Rules, Web to Lead & Lead Auto Response Rules
+Note that Lead has not been added as a Navigation Item to any App
+            </div>
 
             <div class="img-container">
-                <img src="lead-flow.png" alt="Flowchart showing Lead Process" onerror="this.style.display='none'; this.parentElement.innerText='[Image missing: Upload a file named lead-flow.png to your GitHub repository to see the Lead Flowchart here]'">
-            </div>
-
-            <h3>Active Automations</h3>
-            <ul>
-                <li><strong>Update Lead Status (Investments Cadence):</strong> Updates the Lead Status as it moves through the cadence.
-                    <ul>
-                        <li>After first contact: Status sets to "Contacted".</li>
-                        <li>After first automated email (2 weeks): Status sets to "Nurturing".</li>
-                    </ul>
-                </li>
-                <li><strong>Remove Lead From Cadence:</strong> When a lead's status is set to "Unqualified", they are automatically removed from the Cadence.</li>
-                <li><strong>Lead Conversion:</strong> A flow checks for <code>isConverted = true</code> on the Lead object and updates the corresponding Opportunity fields.</li>
-            </ul>
-        </section>
-
-        <section id="reporting">
-            <h2>6. Reporting</h2>
-            <p>Start with the <strong>Sales Engagement Dashboard</strong>. Two additional reports have been created specifically for onboarding Ministry Consultants:</p>
-            <ul>
-                <li>Ministry Consultants w/ Engagements by Day</li>
-                <li>Engagement by Ministry Consultant, Month</li>
-            </ul>
-            <p>Custom report types (e.g., "Leads with or without Cadence Trackers") are available as reporting needs expand.</p>
-        </section>
-
-        <section id="ideas">
-            <h2>7. Enhancement Ideas & Future State</h2>
-            
-            <h3>Proposed Features</h3>
-            <ul>
-                <li><strong>Screen Flow for Church Visits:</strong> A dedicated app/screen flow to be used on an iPad during visits to capture Lead Name, Email, and Phone, creating a Lead Record automatically.</li>
-                <li><strong>Quick Cadence Creator:</strong> A permission set allowing users to create their own "Quick Cadences" (personal communication templates).</li>
-                <li><strong>Phone Number Only Cadence:</strong> A specialized cadence for scenarios where only a phone number is collected (no email).</li>
-                <li><strong>Teams Integration:</strong> A $0 SKU to integrate Salesforce with Microsoft Teams.</li>
-                <li><strong>Web to Lead:</strong> Leverage the "Invest Now" action on the website. The form action endpoint can be set to Salesforce's Web-to-Lead URL to create leads automatically.</li>
-            </ul>
-
-            <div class="code-block">
-                <strong>Web-to-Lead Endpoints:</strong><br>
-                Production: https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8<br>
-                Test/Sandbox: https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8
+                <p><strong>[Placeholder for Lead Flow Diagram]</strong></p>
+                <img src="YOUR_CONVERTED_LEAD_FLOW_GDIVE_LINK_HERE" alt="Flowchart showing Lead Process" onerror="this.style.display='none'; this.parentElement.innerText='[Image missing: Replace the placeholder text "YOUR_CONVERTED_LEAD_FLOW_GDIVE_LINK_HERE" with your converted Google Drive direct link for the Lead Flow diagram.]'">
             </div>
         </section>
+
+        <section id="slide-22">
+            <h2>Slide 22: Automations</h2>
+            <div class="raw-text">
+Automations
+● Update Lead Status Investments Cadence
+  ○ This flow updates the Lead Status field as the Lead 
+  continues through the Investments Cadence. After the first contact, the Lead is set to Contacted, after the first automated email at the two week mark the Lead is set to Nurturing and will stay in this status.
+● Remove Lead From Cadence
+  ○ When a lead's status is set to "Unqualified", remove them from the Cadence
+● Update Opportunity Fields on Lead Convert
+  ○ This flow looks for isConverted = true on Lead object and Updates the corresponding Opportunity fields
+● Request DKIM Access Flow
+  ○ Screenflow Starts a session for DKIM key access
+            </div>
+        </section>
+
+        <section id="slide-23">
+            <h2>Slide 23: Sales Engagement Flow Actions</h2>
+            <div class="raw-text">
+Sales Engagement Flow Actions
+Leverage various cadence prebuilt types and actions
+© 2025 pfp all rights reserved
+            </div>
+        </section>
+
+        <section id="slide-24">
+            <h2>Slide 24: Reports</h2>
+            <div class="raw-text">
+Reports
+Cadence - Custom report types
+Start with your Sales Engagement Dashboard, then add custom reports as your reporting needs expand.
+            </div>
+        </section>
+
+        <section id="slide-25">
+            <h2>Slide 25: Reports</h2>
+            <div class="raw-text">
+Reports
+Existing reports on the Sales Engagement Dashboard have been updated for Current users.
+Two additional reports have been Created for insights when Ministry Consultants are onboarded:
+Ministry Consultants wEngagements by Day
+Engagement by Ministry Consultant, Month
+© 2025 pfp all rights reserved
+            </div>
+        </section>
+
+        <section id="slide-26">
+            <h2>Slide 26: Enhancement Ideas</h2>
+            <div class="raw-text">
+© 2025 pfp all rights reserved
+ Enhancement Ideas
+            </div>
+        </section>
+
+        <section id="slide-27">
+            <h2>Slide 27: Screen Flow to Capture Lead Details at Church Visits</h2>
+            <div class="raw-text">
+Screen Flow to Capture Lead Details at Church Visits
+Create a dedicated app to be used during Church Visits.
+Screen flow captures Lead Name, Email, Phone Number and creates a Lead Record.
+An Ipad or tablet available for use at the Church Visit would be required.
+            </div>
+        </section>
+
+        <section id="slide-28">
+            <h2>Slide 28: Quick Cadences</h2>
+            <div class="raw-text">
+:)
+Permission set - Quick Cadence Creator
+Allows a user to create their own repeatable “Quick Cadences”
+Quick Cadences
+            </div>
+        </section>
+
+        <section id="slide-29">
+            <h2>Slide 29: Phone Number Only Cadence</h2>
+            <div class="raw-text">
+Phone Number Only Cadence
+There may be scenarios where we don’t have the email after a church visit, but we were provided a phone number.
+We could create a process to automatically put any Leads without emails and with phone numbers into a special Phone Number Only Cadence.
+            </div>
+        </section>
+
+        <section id="slide-30">
+            <h2>Slide 30: Teams Integration</h2>
+            <div class="raw-text">
+Teams Integration
+The Teams Integration is a $0 SKU that you could explore in the future.
+            </div>
+        </section>
+
+        <section id="slide-31">
+            <h2>Slide 31: Opportunity</h2>
+            <div class="raw-text">
+Opportunity
+Future recommendation to review differences between Investments vs Loan
+Perhaps create Opportunity record types, page layouts, stages and probabilities that correspond with the type of Opportunity
+            </div>
+        </section>
+
+        <section id="slide-32">
+            <h2>Slide 32: Web to Lead</h2>
+            <div class="raw-text">
+Web to Lead
+Functionality could be explored for https://churchinvestorsfund.org/ “Invest Now” action.
+Web to Lead allows you to select fields to be filled, generates an html form with a form action endpoint that will create the lead record in salesforce.
+Because the webform is already fully built out on churchInvestorsfund.org, your website team might be able to leverage the action instead of using Salesforce’s form.
+            </div>
+        </section>
+
+        <section id="slide-33">
+            <h2>Slide 33: Web to Lead Proof of Concept Testing</h2>
+            <div class="raw-text">
+In Setup > Web to Lead and “Create Web-to-Lead” form
+For Web to Lead Proof of Concept Testing
+● Correct action attribute: Your form's action attribute must be set to the Salesforce endpoint: https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8.
+If you are using a production environment, the URL will be https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8.
+● Essential Hidden Fields: The Salesforce form generator includes specific hidden input fields that are essential for the submission to work correctly.
+You must copy these from the generated code into your existing form:
+● oid: This is your Salesforce Organization ID, which tells Salesforce where to create the lead.
+● retURL: This specifies the URL the user will be redirected to after the form is successfully submitted.
+● Matching Field Names: The name attributes of your existing form's input fields (e.g., for First Name, Last Name, Email) must precisely match the name attributes in the Salesforce-generated HTML (e.g., first_name, last_name, email).
+● Required Fields: Ensure all fields that are marked as "required" in your Salesforce Lead object settings or page layouts are included in your website form and have data submitted.
+Submissions that violate validation rules will fail to create a lead record.
+            </div>
+        </section>
+
+        <section id="slide-34">
+            <h2>Slide 34: Flows for Mass Emails</h2>
+            <div class="raw-text">
+Flows for Mass Emails
+If there are times when you need to send a generic reminder email to all or a portion of your partners, you can create a Flow to do the work for you.
+Choose either a screen flow or a scheduled flow depending on your user’s preference. 
+            </div>
+        </section>
+        
+        <section id="slide-35">
+            <h2>Slide 35: Flows for Mass Emails</h2>
+            <div class="raw-text">
+Flows for Mass Emails
+© 2025 pfp all rights reserved
+            </div>
+        </section>
+
+        <section id="slide-36">
+            <h2>Slide 36: Thank You!</h2>
+            <div class="raw-text">
+© 2025 pfp all rights reserved
+ Thank You!
+            </div>
+        </section>
+
 
         <div class="footer">
-            <p>&copy; 2025 PFP. All rights reserved.</p>
+            <p>Content derived directly from Training.pdf. &copy; 2025 pfp. All rights reserved.</p>
         </div>
 
     </div>
