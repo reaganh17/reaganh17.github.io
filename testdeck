@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Engagement Training Knowledge Base</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --sidebar-width: 280px;
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #ffffff;
+            --sidebar-bg: #f8f9fa;
+            --text-color: #333;
+            --border-color: #e9ecef;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            display: flex;
+            height: 100vh;
+            overflow: hidden; /* Prevent body scroll, handle in elements */
+        }
+
+        /* SIDEBAR NAVIGATION */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            padding: 20px;
+            overflow-y: auto;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .sidebar nav a {
+            display: block;
+            padding: 10px 12px;
+            text-decoration: none;
+            color: #555;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            transition: background 0.2s;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #e2e6ea;
+            color: var(--primary-color);
+        }
+
+        /* MAIN CONTENT AREA */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 40px 60px;
+            flex: 1;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        section {
+            max-width: 900px;
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; }
+        h2 { font-size: 1.8rem; color: var(--primary-color); margin-top: 30px; border-left: 5px solid var(--accent-color); padding-left: 15px; }
+        h3 { font-size: 1.3rem; color: #444; margin-top: 25px; }
+        p, li { line-height: 1.6; margin-bottom: 15px; }
+        
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* CODE/TECHNICAL BLOCKS */
+        .code-block {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h3>Training Manual</h3>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#checklist">1. Go Live Checklist</a>
+            <a href="#users">2. User Management</a>
+            <a href="#outlook">3. Outlook Integration</a>
+            <a href="#cadences">4. Cadences</a>
+            <a href="#leads">5. Leads & Automations</a>
+            <a href="#reporting">6. Reporting</a>
+            <a href="#ideas">7. Enhancement Ideas</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        
+        <section id="intro">
+            <h1>Sales Engagement Training</h1>
+            <p>Welcome to the Passion Fruit Partners Sales Engagement training guide. This knowledge base covers the setup, user management, and automation processes for your Salesforce environment.</p>
+            [cite_start]<p><strong>Agenda:</strong> [cite: 1]</p>
+            <ul>
+                <li>Go Live Checklist</li>
+                <li>User Management</li>
+                <li>Outlook</li>
+                <li>Cadences</li>
+                <li>Leads and Automations</li>
+                <li>Reporting</li>
+                <li>Enhancement Ideas</li>
+            </ul>
+        </section>
+
+        <section id="checklist">
+            <h2>1. Go Live Checklist</h2>
+            [cite_start]<p>Ensure the following steps are completed for the January Go Live[cite: 12]:</p>
+            <ol>
+                [cite_start]<li><strong>Update Email Templates:</strong> Update all Automated email templates with appropriate messages for each email interval[cite: 17]. 
+                    [cite_start]<br><em>Note: Do not use {{{Sender.Signature}}} in templates; the logo will not render[cite: 18].</em>
+                </li>
+                [cite_start]<li><strong>Update Cadences:</strong> Update the "Church Visit Cadence" with templates and intervals that align with your processes[cite: 19].
+                    [cite_start]<br><em>Ensure the "Add to email thread" checkbox is configured based on testing preferences[cite: 20].</em>
+                </li>
+                [cite_start]<li><strong>Folder Sharing:</strong> If the Investments Team and Loans Team need to see each other's Cadences or Email Templates, update the Folder Sharing settings[cite: 21].</li>
+                <li><strong>User Permissions:</strong> Remove "Sales Engagement Basic User" permissions and assign "Sales Engagement User" permissions. [cite_start]Having both can cause issues[cite: 22].</li>
+                [cite_start]<li><strong>Working Hours:</strong> Users can set Cadence working days and hours in their Personal Information settings (View profile Avatar > Settings)[cite: 24].</li>
+            </ol>
+        </section>
+
+        <section id="users">
+            <h2>2. User Management</h2>
+            
+            <h3>Permission Sets Definitions</h3>
+            [cite_start]<p>The following permission sets are available for assignment[cite: 29]:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission Set</th>
+                        <th>Description</th>
+                        <th>Who Should Be Assigned</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Email Template Builder</td>
+                        <td>Provides access to the lightning Email Template Builder.</td>
+                        <td>Any staff who need to create Email Templates.</td>
+                    </tr>
+                    <tr>
+                        <td>Sales Engagement User</td>
+                        <td>Provides access to all Sales Engagement functionality, Inbox access, send email.</td>
+                        <td>All staff who would need to assign/reassign Leads to Cadences as part of their daily role.</td>
+                    </tr>
+                    <tr>
+                        <td>Quick Cadence Creator</td>
+                        <td>Functionality for a user to create their own single-step repeatable "Cadences".</td>
+                        <td>Could be a feature rolled out to all Sales Engagement Users in the future.</td>
+                    </tr>
+                    <tr>
+                        <td>Sales Engagement Cadence Creator</td>
+                        <td>Create cadences for your organization.</td>
+                        <td>The users responsible for defining the cadence processes for each department.</td>
+                    </tr>
+                    <tr>
+                        <td>Access DKIM Keys</td>
+                        <td>For temporary access to "setup" and the DKIM keys location. Session activation required.</td>
+                        <td>Currently assigned to specific admins; requires running a flow to activate the session.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Cadence & Folder Sharing</h3>
+            <ul>
+                <li><strong>Cadence Folder Sharing:</strong> "Cadences from Salesforce" has been removed from user view to reduce clutter. Investment Cadences are visible to the investments public group; [cite_start]Loan Cadences to the loan personnel public group[cite: 124].</li>
+                <li><strong>Email Template Sharing:</strong> Managed by Alica and Vadim. [cite_start]Cadence Automated Emails are visible to all internal users[cite: 155].</li>
+                <li><strong>Cadence Tracker Read/Write:</strong> Access has been opened up in "Loans Dept" and "Investments Dept" permission sets. [cite_start]This allows users to reassign the target in the cadence to themselves [cite: 130-133].</li>
+            </ul>
+        </section>
+
+        <section id="outlook">
+            <h2>3. Outlook Integration</h2>
+            
+            <h3>Org-Wide Email & DKIM</h3>
+            <p>Users and Automations can use Organization-Wide Email Addresses to send messages from generic emails. [cite_start]Configure this in <strong>Setup > Organization-Wide Addresses</strong>[cite: 157].</p>
+            [cite_start]<p><em>Note: A DKIM Key was configured to minimize external server rejection of un-verified email[cite: 157].</em></p>
+
+            <h3>Outlook Integration Features</h3>
+            <ul>
+                [cite_start]<li><strong>Log Emails:</strong> Log emails to Salesforce records directly from Outlook[cite: 160].</li>
+                [cite_start]<li><strong>Create Records:</strong> Create Salesforce records (Leads, Tasks, Opportunities) from Outlook[cite: 160].</li>
+                [cite_start]<li><strong>Inbox View:</strong> The "Inbox with Work Queue" component is assigned to System Administrators, while the default Inbox Email Pane is for standard users[cite: 161].</li>
+            </ul>
+        </section>
+
+        <section id="cadences">
+            <h2>4. Cadences</h2>
+            
+            <h3>Investment Cadence - Church Visit</h3>
+            <p>This cadence tracks the flow from the initial call. [cite_start]It typically includes steps for "Initial Call", followed by automated emails or follow-up tasks[cite: 163].</p>
+
+            <h3>To Do List vs. Work Queue</h3>
+            <p><strong>Work Queue:</strong> A feature of Sales Engagement for tracking Cadence tasks.</p>
+            <p><strong>To Do List:</strong> A replacement for the Work Queue. [cite_start]It is accessible from the Sales Engagement App only and has been added to the Utility bar for the Investments and Loans App [cite: 164-165].</p>
+            
+            <div class="code-block">
+                [cite_start]<strong>Tip:</strong> Set your Cadence working hours in "Cadence Settings" under your personal settings to ensure tasks appear in your To Do List only during your working hours[cite: 166].
+            </div>
+        </section>
+
+        <section id="leads">
+            <h2>5. Leads & Automations</h2>
+            
+            <h3>Lead Flow Process</h3>
+            <p>The current process for a "Church Visit" lead involves creating a New Lead, adding them to a Cadence, and attempting to connect. [cite_start]If interested, the Lead is converted to a Placeholder Ministry Partner, New Business Contact, or New Opportunity[cite: 168].</p>
+
+            <h3>Active Automations</h3>
+            <ul>
+                <li><strong>Update Lead Status (Investments Cadence):</strong> Updates the Lead Status as it moves through the cadence.
+                    <ul>
+                        <li>After first contact: Status sets to "Contacted".</li>
+                        [cite_start]<li>After first automated email (2 weeks): Status sets to "Nurturing" [cite: 170-171].</li>
+                    </ul>
+                </li>
+                [cite_start]<li><strong>Remove Lead From Cadence:</strong> When a lead's status is set to "Unqualified", they are automatically removed from the Cadence[cite: 172].</li>
+                [cite_start]<li><strong>Lead Conversion:</strong> A flow checks for <code>isConverted = true</code> on the Lead object and updates the corresponding Opportunity fields[cite: 172].</li>
+            </ul>
+        </section>
+
+        <section id="reporting">
+            <h2>6. Reporting</h2>
+            <p>Start with the <strong>Sales Engagement Dashboard</strong>. [cite_start]Two additional reports have been created specifically for onboarding Ministry Consultants[cite: 178]:</p>
+            <ul>
+                <li>Ministry Consultants w/ Engagements by Day</li>
+                <li>Engagement by Ministry Consultant, Month</li>
+            </ul>
+            [cite_start]<p>Custom report types (e.g., "Leads with or without Cadence Trackers") are available as reporting needs expand[cite: 175].</p>
+        </section>
+
+        <section id="ideas">
+            <h2>7. Enhancement Ideas & Future State</h2>
+            
+            <h3>Proposed Features</h3>
+            <ul>
+                [cite_start]<li><strong>Screen Flow for Church Visits:</strong> A dedicated app/screen flow to be used on an iPad during visits to capture Lead Name, Email, and Phone, creating a Lead Record automatically [cite: 180-181].</li>
+                [cite_start]<li><strong>Quick Cadence Creator:</strong> A permission set allowing users to create their own "Quick Cadences" (personal communication templates)[cite: 183].</li>
+                [cite_start]<li><strong>Phone Number Only Cadence:</strong> A specialized cadence for scenarios where only a phone number is collected (no email) [cite: 184-185].</li>
+                [cite_start]<li><strong>Teams Integration:</strong> A $0 SKU to integrate Salesforce with Microsoft Teams[cite: 187].</li>
+                <li><strong>Web to Lead:</strong> Leverage the "Invest Now" action on the website. [cite_start]The form action endpoint can be set to Salesforce's Web-to-Lead URL to create leads automatically [cite: 189-190].</li>
+            </ul>
+
+            <div class="code-block">
+                [cite_start]<strong>Web-to-Lead Endpoints [cite: 193-194]:</strong><br>
+                Production: https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8<br>
+                Test/Sandbox: https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8
+            </div>
+        </section>
+
+        <div class="footer">
+            <p>&copy; 2025 Passion Fruit Partners. [cite_start]All rights reserved. [cite: 11]</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
