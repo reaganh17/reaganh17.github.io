@@ -8,6 +8,13 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Nunito', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+    .page-wrapper { display: flex; min-height: 100vh; }
+    nav { position: sticky; top: 0; height: 100vh; width: 260px; min-width: 260px; background: #1e3a5f; padding: 30px 20px; overflow-y: auto; }
+    nav h2 { font-size: 1rem; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    nav li a { display: block; padding: 10px 14px; color: rgba(255,255,255,0.85); text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
+    nav li a:hover { background: rgba(255,255,255,0.15); color: white; }
+    .main-content { flex: 1; padding: 30px; max-width: 900px; }
     .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
     header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 40px 20px; text-align: center; margin-bottom: 30px; border-radius: 12px; }
     header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
@@ -44,12 +51,7 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Sales Engagement Training Guide</h1>
-      <p>Leads, Automations, Cadences & Go Live Checklist</p>
-    </header>
-
+  <div class="page-wrapper">
     <nav>
       <h2>Agenda</h2>
       <ul>
@@ -65,7 +67,13 @@
       </ul>
     </nav>
 
-    <section id="golive">
+    <div class="main-content">
+      <header>
+        <h1>Sales Engagement Training Guide</h1>
+        <p>Leads, Automations, Cadences & Go Live Checklist</p>
+      </header>
+
+      <section id="golive">
       <h2>Steps for Go Live in January</h2>
       <div class="steps">
         <ol>
@@ -304,6 +312,7 @@
         </ol>
       </div>
     </section>
+    </div>
   </div>
 </body>
 </html>
